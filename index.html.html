@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+
+
+<style>
+
+body {
+  font-family: "Lato", sans-serif;
+}
+body {
+  background-image: linear-gradient(white,lightblue);
+height:100%;
+}
+
+
+.sidenav {
+  height:100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://wallpaperaccess.com/full/159984.jpg");
+
+  /* Set a specific height */
+  height: 30%;
+  
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+
+
+
+/* Place text in the middle of the image */
+.hero-text {
+  font-size: 1em;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+
+.item2 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.boxed {
+  border: 1px solid green ;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.circle2 {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#education {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
+.sub-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.sub-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sub-container .details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+}
+
+.sub-container .details h3 {
+  margin-top: 0;
+}
+
+.sub-container .details p {
+  margin-bottom: 0;
+}
+
+.sub-container .details a {
+  margin-top: 10px;
+}
+
+
+.wrapper1 {
+  background: linear-gradient(to right, #99AAFF, #4D6AFF);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.image {
+  width: 50%;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  width: 50%;
+  padding-left: 50px;
+}
+
+.text p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 30%;
+  margin: 10px;
+  padding: 10px;
+  background-color: #b0e0e6;
+  text-align: center;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.box h2 {
+  margin-bottom: 10px;
+}
+
+.box p {
+  margin-bottom: 0;
+}
+
+.gradient-box {
+  background: linear-gradient(to bottom right, #4d94ff, #b3d9ff);
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+</style>
+</head>
+<body>
+
+<div id="main">
+  
+  <span style="font-family:'Courier New'; font-size:20px;cursor:pointer" onclick="openNav()">&#9776; SSK</span>
+<div id="main2" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+</div>
+
+</div>
+
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>“Remember that wherever your heart is, there you will find your treasure.”</h1>
+    <p>― Paulo Coelho, The Alchemist</p>
+  </div>
+</div>
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#aa">About Myself</a><br>
+  <a href="#educat">Education</a><br>
+  <a href="#intern">Internships</a><br>
+  <a href="#projects">Projects</a><br>
+  <a href="#contact">Contact</a>
+</div>
+
+
+
+<div id="aa">
+<div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="C:\Users\Lenovo\Downloads\sqqq.jpg" alt="My Image" class="circle" style="margin-top: 4.5px;">
+      </div>
+      <div class="col-md-8"><br><br>
+        <h2>About Me</h2>
+        <p> Hardworking and analytical BTech student with a passion for neuroscience and data
+analytics. To secure a challenging role in a dynamic and fast-paced environment where I can
+apply my technical skills, analytical mindset, and passion for problem-solving to contribute to
+the success of a team. I am eager to continue learning and growing as a professional while
+making a difference in the field of technology. A committed team player with a track record of
+delivering results in fast-paced, deadline-driven environments.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br><br>
+
+<div id="educat">
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <div class="w3-container33">
+<section id="education" class="container w3-text-grey">
+<br>
+  <h2>Education</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="sub-container">
+        <img src="https://shabiba.eu-central-1.linodeobjects.com/2018/01/17/808743.jpg" width="400" height="200">
+        <div class="details">
+          <h3>Indian School Muscat </h3>
+          <p>Indian School Muscat is a premier English-medium school in the Sultanate of Oman, established in 1975. It is one of the largest Indian schools in the Gulf region, providing education from Kindergarten to Grade 12, with an enrollment of over 10,000 students. The school is affiliated with the Central Board of Secondary Education (CBSE), New Delhi</p>
+          <a href="https://ismoman.net/" class="btn btn-primary" class="btn btn-primary">Visit Website</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="sub-container">
+        <img src="https://images.indianexpress.com/2021/02/AmritaVishwa.jpg" width="400" height="200" >
+        <div class="details">
+          <h3>Amrita Vishwa Vidyapeetham</h3>
+          <p>Amrita Vishwa Vidyapeetham, also known as Amrita University, is a private university located in Kollam, Kerala, India. The university is ranked among the top 100 institutions in India by the National Institutional Ranking Framework (NIRF) and has been recognized by various international organizations for its excellence in education and research. </p>
+          <a href="https://www.amrita.edu/campus/amritapuri/" class="btn btn-primary">Visit Website</a>
+<br>
+<br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+    </div>
+  </div>
+</section>
+ </div>
+
+
+
+
+<div id="intern">
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"></i>Internship</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>ACM-ASC Internship Program</b></h5>
+          <h6 ><i class="fa fa-calendar fa-fw w3-margin-right"></i>July 2022 - September 2022</h6>
+          <p>Gained hands-on experience in working with complex data and AI frameworks, and was able to
+broaden my knowledge and skills in the areas of neuroscience and deep learning.
+</p>
+
+</div>
+
+
+<hr>
+        
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Megara Robotics Internship Program</b></h5>
+          <h6 ><i class="fa fa-calendar fa-fw w3-margin-right"></i>November 2021 - Dec 2021</h6>
+          <p> Organised by HuT (Humanitarian Technology) Labs, Megara Robotics Pvt. Ltd, IEEE Student Branch</p>
+          
+
+        </div>
+      </div>
+
+</div>
+<div id="projects">
+      <div class="w3-container w3-card w3-white w3-margin-bottom w3-animate-opacity">
+        <h2 class="w3-text-grey w3-padding-16"></i>Projects</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>MRI Tumor Type Diagnostics of Clinical MRI Datasets with the help of Deep Learning
+Methodologies</b></h5>
+          <h6 ><i class="fa fa-calendar fa-fw w3-margin-right"></i>July 2022 - Current</h6>
+          <p>Headed by Mr. Amitava Mukherjee of Amrita Vishwa Vidyapeetham, Amritapuri and Dr. Janet Paluh of
+Suny Polytechnic Institute, New York. Motivated by the potential of AI in the healthcare industry and development of solutions that can help
+improve the lives of patients. Currently working on the development of SIENNA, an artificial intelligence deep learning platform
+designed to limit false positive and false negative outcomes of tumor type classification.
+</p>
+          <hr>
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Parkinson's Disease Detection using Machine Learning</b></h5>
+          <h6 ><i class="fa fa-calendar fa-fw w3-margin-right"></i>February 2022 - August 2022</h6>
+          <p>Parkinson's disease is a chronic and progressive neurological disorder that affects movement and other motor functions. Early diagnosis is crucial for the effective management of the disease. Machine learning has shown potential for early diagnosis of Parkinson's disease by analyzing voice and speech patterns, tremors, and gait patterns.
+Various machine learning algorithms, such as support vector machines, decision trees, and neural networks, have been used for the detection of Parkinson's disease with high accuracy.
+
+Parkinson's disease detection using machine learning has the potential to improve the accuracy and speed of diagnosis, leading to better management of the disease and improved quality of life for patients.</p>
+
+          <hr>
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Facial Recognition Systems using Dimensionality Reduction Algorithms</b></h5>
+          <h6 ><i class="fa fa-calendar fa-fw w3-margin-right"></i>January 2022 - May 2022</h6>
+          <p>Facial recognition systems have become increasingly popular in recent years due to their potential applications in a wide range of fields, including security, entertainment, and marketing. One of the major challenges in building such systems is to reduce the dimensionality of the feature space to accurately and efficiently identify and match faces.
+After reducing the dimensionality of the feature space, classification algorithms such as Support Vector Machines (SVM), Neural Networks, and k-Nearest Neighbors (k-NN) are used to classify and match the faces. The classification process involves comparing the feature vectors of the input image with the pre-stored feature vectors of the faces in the database.</p><br>
+        </div>
+      </div>
+</div>
+
+</div>
+
+
+
+<footer class="w3-container w3-container w3-2021-cerulean w3-center w3-margin-top">
+<p>Find me At</p>
+<a href="sreyasunilk2001@gmail.com"><i class="fa fa-envelope"></i></a></li> 
+<a href="https://www.linkedin.com/in/sreya-sunil/"><i class="fa fa-linkedin"></i></a></li>
+<a href="https://github.com/sreya01"><i class="fa fa-github"></i></a></li>
+<a href="tel:7907246945"><i class="fa fa-phone"></i></a></li>
+
+</footer>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 
